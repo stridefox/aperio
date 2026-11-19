@@ -1,0 +1,3 @@
+-- database/researchinfo/procedures.sql
+-- Stored procedures for the aperio_research_catalog database (e.g. PII policy handlers).
+-- Status: placeholder - not implemented yet.

@@ -1,0 +1,3 @@
+-- database/researchinfo/functions.sql
+-- Stored SQL functions for the aperio_research_catalog database.
+-- Status: placeholder - not implemented yet.

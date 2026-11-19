@@ -1,0 +1,3 @@
+-- database/researchinfo/mockdata.sql
+-- Mock / seed data for local development and testing of the research catalog database.
+-- Status: placeholder - not implemented yet.
