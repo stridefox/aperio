@@ -1,3 +1,9 @@
-# core/exceptions.py
-# Custom exception classes and exception handlers shared across the application.
-# Status: placeholder - not implemented yet.
+"""
+/core/exceptions.py
+
+This module defines the exceptions for the APIs.
+"""
+
+class APIException(Exception):
+    """Base exception for API errors."""
+    pass

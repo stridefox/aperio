@@ -2,25 +2,6 @@ CREATE DATABASE aperio_research_catalog;
 
 USE aperio_research_catalog;
 
-CREATE TABLE Users (
-    user_id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(30) NOT NULL UNIQUE,
-    password VARCHAR(60) NOT NULL, 
-    email VARCHAR(50) NOT NULL UNIQUE,
-    first_name VARCHAR(30) NOT NULL, 
-    last_name VARCHAR(30) NOT NULL,
-    user_type ENUM(
-        "Human", 
-        "AI Agent"
-    ) DEFAULT "Human",
-    is_active BOOLEAN DEFAULT True,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    created_by INT,
-    FOREIGN KEY (created_by)
-        REFERENCES Users(user_id)
-        ON DELETE RESTRICT ON UPDATE CASCADE
-) COMMENT = "Feature: User Management | Stores the credentials of individual users.";
-
 CREATE TABLE Roles (
     role_id INT AUTO_INCREMENT PRIMARY KEY, 
     role_title VARCHAR(30) NOT NULL UNIQUE, 
@@ -64,6 +45,29 @@ CREATE TABLE RolesToPermissions (
         ON UPDATE CASCADE ON DELETE CASCADE,
     PRIMARY KEY (role_id, permission_id)
 ) COMMENT ="Feature: Role Management | Manages different permissions of a role.";
+
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL UNIQUE,
+    password VARCHAR(60) NOT NULL, 
+    email VARCHAR(50) NOT NULL UNIQUE,
+    first_name VARCHAR(30) NOT NULL, 
+    last_name VARCHAR(30) NOT NULL,
+    user_type ENUM(
+        "Human", 
+        "AI Agent"
+    ) DEFAULT "Human",
+    is_active BOOLEAN DEFAULT TRUE,
+    role_id INT NOT NULL, 
+    FOREIGN KEY (role_id)
+        REFERENCES Roles(role_id)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_by INT,
+    FOREIGN KEY (created_by)
+        REFERENCES Users(user_id)
+        ON DELETE RESTRICT ON UPDATE CASCADE
+) COMMENT = "Feature: User Management | Stores the credentials of individual users.";
 
 CREATE TABLE Research (
     research_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -225,3 +229,5 @@ CREATE TABLE DataChangeLog (
         ON DELETE CASCADE ON UPDATE CASCADE
 )   COMMENT = "Feature: Logs | Logs all of the changes to data. 
                Including being added or deleted. Redacted accordingly.";
+
+-- TODO {@stridefox}: Think about adding a separate table for support tickets. 

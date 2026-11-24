@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 fastapi = {extras = ["standard"], version = "*"}
 mysql-connector-python = "*"
-passlib = {extras = ["bcrypt"], version = "*"}
-python-jose = "*"
+pyjwt = "*"
+pwdlib = {extras = ["argon2"], version = "*"}
 
 [dev-packages]
 
