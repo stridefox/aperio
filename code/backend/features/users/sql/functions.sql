@@ -1,0 +1,3 @@
+-- features/users/sql/functions.sql
+-- SQL functions used only by the users feature. Move a function to database/researchinfo/sql/functions/ once another feature needs it.
+-- Status: placeholder - not implemented yet.

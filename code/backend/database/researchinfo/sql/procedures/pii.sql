@@ -1,0 +1,3 @@
+-- database/researchinfo/sql/procedures/pii.sql
+-- Shared stored procedures that handle PII policies (the handlers named in PIIPolicies.procedure_name).
+-- Status: placeholder - not implemented yet.

@@ -1,0 +1,3 @@
+-- features/auth/sql/procedures.sql
+-- Stored procedures used only by the auth feature. Move a procedure to database/researchinfo/sql/procedures/ once another feature needs it.
+-- Status: placeholder - not implemented yet.

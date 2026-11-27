@@ -1,0 +1,3 @@
+-- features/research/sql/procedures.sql
+-- Stored procedures used only by the research feature. Move a procedure to database/researchinfo/sql/procedures/ once another feature needs it.
+-- Status: placeholder - not implemented yet.

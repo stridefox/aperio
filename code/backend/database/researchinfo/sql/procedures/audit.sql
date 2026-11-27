@@ -1,0 +1,3 @@
+-- database/researchinfo/sql/procedures/audit.sql
+-- Shared stored procedures for audit logging (writing to QueryLog / DataChangeLog). Called by triggers and by features.
+-- Status: placeholder - not implemented yet.

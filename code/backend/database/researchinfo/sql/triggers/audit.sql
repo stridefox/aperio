@@ -1,0 +1,3 @@
+-- database/researchinfo/sql/triggers/audit.sql
+-- Triggers on the research catalog tables that record data changes in QueryLog / DataChangeLog.
+-- Status: placeholder - not implemented yet.

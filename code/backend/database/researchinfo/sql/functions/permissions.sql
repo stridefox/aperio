@@ -1,0 +1,3 @@
+-- database/researchinfo/sql/functions/permissions.sql
+-- Shared SQL functions for permission checks (e.g. whether a user's role grants a permission). Used by more than one feature.
+-- Status: placeholder - not implemented yet.

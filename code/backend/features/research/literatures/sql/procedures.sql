@@ -1,0 +1,3 @@
+-- features/research/literatures/sql/procedures.sql
+-- Stored procedures used only by the literatures feature. Move a procedure to database/researchinfo/sql/procedures/ once another feature needs it.
+-- Status: placeholder - not implemented yet.

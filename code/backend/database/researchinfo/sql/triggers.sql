@@ -1,3 +1,0 @@
--- database/researchinfo/triggers.sql
--- Triggers for the aperio_research_catalog database (e.g. writing to QueryLog / DataChangeLog).
--- Status: placeholder - not implemented yet.
